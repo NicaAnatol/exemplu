@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script><link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@500&family=Mooli&family=Playfair+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<title>Document</title>
+</head>
+<style>
+
+    body{
+        background-color:#F4EFE2;
+        padding:0;
+        margin:0;
+    }
+    .bar{
+        margin-bottom:0 !important;
+    }
+    .logo{
+        border-radius:50%;
+        margin-left:10px;
+    }
+    .nav-link, #home{
+        color:#F4EFE2;
+    }
+    .recenzii{
+  text-align: center;
+  justify-content: center;
+  background-color:#F4EFE2 ;
+  }
+  .recenzie{
+   padding:10px;
+  }
+  .text{
+    color:#F4EFE2;
+  }
+  .tabs:hover,.tabs:focus {
+    color: #B4B6BB !important;
+  }
+  .prima{
+    height:500px !important;
+    width:100%;
+  }
+  .reclama{
+   margin:10px ;
+  }
+  .dropdown-menu{
+  background-color: #F4EFE2;
+  --bs-dropdown-min-width: 0rem;
+  --bs-dropdown-link-active-bg:#516E4F;
+  border:solid 1px#516E4F;
+  }
+  .dropdown-item{
+    color:#516E4F;
+  }
+  .container{
+    align-items: center;
+  }
+  .copyright{
+    background-color: #516E4F;
+  }
+  .copyright{
+    padding-left:50px;
+    padding-right:50px;
+  }
+  .lista > li{
+    text-align: left;
+    color:#516E4F
+  }
+  .cont{
+    border-radius: 40px !important;
+    background-color:#F4EFE2;
+  }
+  .buton{
+    border:1px solid #516E4F; 
+    border-radius: 40px;
+    color:#516E4F;
+  }
+  .buton:hover{
+    background-color: #516E4F !important;
+    border-color:#516E4F;
+  }
+  .buton:active{
+    border-color:#516E4F !important;
+  }
+  .card-header{
+    background-color: #516E4F;
+    border-radius: 0 !important;
+    color:#F4EFE2;
+  }
+  .pricing-card-title{
+    color:#516E4F
+  }
+  .comparatii{
+ width: 100%;
+ display: flex;
+ justify-content: center;
+  }
+  .comp{
+    color: #516E4F;
+  }
+  .comp:hover{
+    color:#09471c;
+  }
+  .comp:link{
+    text-decoration: none;
+  }
+  .culoare-back{
+    background-color: #516E4F !important;
+  }
+  .culoare-text{
+    color: #516E4F !important;
+  }
+  .a{
+      position: relative;
+      padding:0;
+
+    }
+    
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color:aliceblue;
+      text-align:center;
+    }
+    .left{
+      position: absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-80%, -50%);
+      color:aliceblue;
+      text-align:left;
+    }
+    .right{
+      position: absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-25%, -50%);
+      color:aliceblue;
+      text-align:right;
+    }
+    .rand{
+        padding:0;
+        margin:0;
+    }
+    .brightness {
+      width: 100%;
+      height: auto;
+      opacity: 0.5;
+      float:left;
+      filter: brightness(50%);
+    }
+    .photo{
+      object-fit: cover;
+      width:100%;
+      max-height:500px;
+    }
+    .carousel-caption{
+      justify-content:center;
+      text-align:center;
+    }
+    .hero{
+    font-size: 15px;
+    background-color: #F4EFE2;
+    border-radius:40px !important;
+    }
+    .spatiu{
+      margin-bottom:80px;
+    }
+    .front-1{
+      font-family: 'Caveat', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Mooli', sans-serif;
+font-family: 'Playfair Display', serif;
+font-size:xx-large;
+    }
+    .front-2{
+      font-family: 'Ysabeau Infant', sans-serif;
+    }
+    .price-title{
+      color:#F4EFE2 !important;
+      font-size: 50px;
+    }
+    .price-text{
+      color:#F4EFE2 !important;
+      margin-bottom:40px ;
+    }
+    @-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: #F4EFE2;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 200px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right,#F4EFE2  0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 200px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 200px;
+  width: 250px;
+}
+ .colegs{
+  display: flex;
+  padding: 0 35px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.prices{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(#D5A3FF 0%, #77A5F8 100%);
+}
+.prices>*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.colegs>*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #F4EFE2;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child{
+  left: -22px;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carousela{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousela::-webkit-scrollbar {
+  display: none;
+}
+.carousela.no-transition {
+  scroll-behavior: auto;
+}
+.carousela.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousela.dragging .cardu {
+  cursor: grab;
+  user-select: none;
+}
+.carousela :where(.cardu, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousela .cardu {
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  background: #F4EFE2;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.carousela .cardu .img {
+  background: #516E4F;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+.cardu .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #F4EFE2;
+}
+.carousela .cardu h2 {
+  font-family: 'Caveat', cursive;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Mooli', sans-serif;
+  font-family: 'Playfair Display', serif;
+  font-size:xx-large;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+  color:#516E4F;
+}
+.carousela .cardu h3 {
+  color: #6A6D78;
+  font-size: 1.31rem;
+  font-family: 'Ysabeau Infant', sans-serif;
+}
+ .wrapper>*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+.but{
+  color:#F4EFE2;
+  text-decoration-color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,0.5));
+}
+.but:link{
+    text-decoration-color:#516E4F;
+  }
+@media screen and (max-width: 900px) {
+  .wrapper .carousela {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousela {
+    grid-auto-columns: 100%;
+  }
+}
+.wrappers{
+  width: 400px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.wrappers header{
+  height: 55px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  position: relative;
+}
+header label{
+  height: 100%;
+  z-index: 2;
+  width: 30%;
+  display: flex;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+#tab-1:checked ~ header .tab-1,
+#tab-2:checked ~ header .tab-2,
+#tab-3:checked ~ header .tab-3{
+  color: #fff;
+}
+header label:nth-child(2){
+  width: 40%;
+}
+header .slider{
+  position: absolute;
+  height: 85%;
+  border-radius: inherit;
+  background: linear-gradient(145deg, #D5A3FF 0%, #77A5F8 100%);
+  transition: all 0.3s ease;
+}
+#tab-1:checked ~ header .slider{
+  left: 0%;
+  width: 90px;
+  transform: translateX(5%);
+}
+#tab-2:checked ~ header .slider{
+  left: 50%;
+  width: 120px;
+  transform: translateX(-50%);
+}
+#tab-3:checked ~ header .slider{
+  left: 100%;
+  width: 95px;
+  transform: translateX(-105%);
+}
+.wrappers input[type="radio"]{
+  display: none;
+}
+.card-area{
+  overflow: hidden;
+}
+.card-area .cards{
+  display: flex;
+  width: 300%;
+}
+.cards .rows{
+  width: 33.4%;
+}
+.cards .rows-1{
+  transition: all 0.3s ease;
+}
+#tab-1:checked ~ .card-area .cards .rows-1{
+   margin-left: 0%;
+}
+#tab-2:checked ~ .card-area .cards .rows-1{
+  margin-left: -33.4%;
+}
+#tab-3:checked ~ .card-area .cards .rows-1{
+   margin-left: -66.8%;
+}
+.rows .price-details{
+  margin: 20px 0;
+  text-align: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.price-details .price{
+  font-size: 65px;
+  font-weight: 600;
+  position: relative;
+  font-family: 'Noto Sans', sans-serif;
+}
+.price-details .price::before,
+.price-details .price::after{
+  position: absolute;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.price-details .price::before{
+  content: "$";
+  left: -13px;
+  top: 17px;
+  font-size: 20px;
+}
+.price-details .price::after{
+  content: "/mon";
+  right: -33px;
+  bottom: 17px;
+  font-size: 13px;
+}
+.price-details p{
+  font-size: 18px;
+  margin-top: 5px;
+}
+.rows .features li{
+  display: flex;
+  font-size: 15px;
+  list-style: none;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.features li i{
+  background: linear-gradient(#D5A3FF 0%, #77A5F8 100%);
+  background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+.features li span{
+  margin-left: 10px;
+}
+.wrappers button{
+  width: 100%;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  height: 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  background: linear-gradient(145deg, #D5A3FF 0%, #77A5F8 100%);
+  transition: transform 0.3s ease;
+}
+.wrapper button:hover{
+  transform: scale(0.98);
+}
+</style>
+<body>
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bar" style="background-color: #516E4F;" >
+         <div class="col-md-3 mb-2 mb-md-0">
+            <a class="navbar-brand" href="#"><img class="logo" alt="logo"src="./img/IMG_1476.PNG" height="50px"/></a>
+        </div>
+  
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link  px-2 tabs front-2" style="font-size: larger;">Features</a></li>
+          <li><a href="#" class="nav-link px-2 tabs front-2" style="font-size: larger;">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 tabs front-2" style="font-size: larger;">Faqs</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle tabs front-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: larger;">
+              Limba
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item front-2" href="#">Romana <img class="flag-img" src="./img/Flag_of_Romania.svg.png" height="12px" width="20px" alt="Romana"></a></li>
+              <li><a class="dropdown-item front-2" href="#">Engleza <img class="flag-img" src="./img/Flag_of_the_United_Kingdom_(1-2).svg.png"  height="12px" width="20px" alt="Rusa"></a></li>
+              <li><a class="dropdown-item front-2" href="#">Rusa <img class="flag-img" src="./img/Flag_of_Russia.svg.webp"  height="12px" width="20px" alt="Rusa"></a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="col-md-3 text-end">
+        </div>
+      </header>
+      <section id="title" class="gradient-background">
+
+        
+                <!------>
+                <div id="carouselExampleSlidesOnly "  class="carousel slide spatiu" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active a"  data-bs-interval="5000">
+                      <img src="./img/thought-catalog-505eectW54k-unsplash.jpg" class="d-block w-100 photo" alt="...">
+                      <div class="center d-md-block">
+                        <h5 class="front-1 " >First slide label</h5>
+                        <p class="front-2">Some representative placeholder content for the first slide.</p>
+                        <button type="button" class="  btn btn-lg btn-outline-primary buton hero front-2">Afla mai multe</button>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                      <img src="./img/kari-shea-1SAnrIxw5OY-unsplash.jpg" class="d-block w-100 photo" alt="...">
+                      <div class="left d-md-block">
+                        <h5 class="front-1 ">First slide label</h5>
+                        <p class="front-2">Some representative placeholder content for the first slide.</p>
+                        <button type="button" class=" btn btn-lg btn-outline-primary buton hero front-2"> Afla mai multe</button>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                      <img src="./img/thought-catalog-505eectW54k-unsplash.jpg" class="d-block w-100 photo" alt="...">
+                      <div class="right d-md-block">
+                        <h5 class="front-1 ">First slide label</h5>
+                        <p class="front-2">Some representative placeholder content for the first slide.</p>
+                        <button type="button" class=" btn btn-lg btn-outline-primary buton hero front-2"> Afla mai multe</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              <div class="price container spatiu " >
+              <div class="Info container-fluid col-lg-12 col--12">
+            <hr class="featurette-divider">
+        
+            <div class="row featurette">
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <h2 class="featurette-heading fw-normal lh-1 front-1 culoare-text">First featurette heading. </h2>
+                <p class="lead front-2 culoare-text">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                  <img src="./img/mikayla-mallek-3iT3dnmblGE-unsplash.jpg" class="img-fluid " alt="...">
+              </div>
+            </div>
+        
+<hr class="featurette-divider ">
+        
+            <div class="row featurette" >
+              <div class="col-lg-6 col-md-6  order-md-2 col-sm-12">
+                <h2 class="featurette-heading fw-normal lh-1 front-1 culoare-text">Oh yeah, it’s that good. See for yourself.</span></h2>
+                <p class="lead front-2 culoare-text">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+              </div>
+              <div class="col-lg-6  col-md-6 col-sm-12">
+                <img src="./img/mikayla-mallek-3iT3dnmblGE-unsplash.jpg" class="img-fluid " alt="...">
+              </div>
+            </div>
+            </div>
+          </div>
+
+          
+          
+          <div class="px-4 py-5 my-5 text-center" style="background-color: #516E4F;">
+  <h1 class="display-5 fw-bold text-body-emphasis front-1 price-title">Serviiciile pe care le oferim:</h1>
+  <div class="col-lg-10 col-md-10 col-sm-9 mx-auto">
+    <p class="price-text">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    </div>
+  </div>
+
+
+  
+<div class="container">
+                  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center  ">
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="card mb-4 rounded-5 shadow-sm cont " >
+                        <div class=" card-header py-3">
+                          <h4 class="my-0 fw-normal front-1" >Standard</h4>
+                        </div>
+                        <div class="card-body   ">
+                          <h1 class="card-title pricing-card-title ">€349<small class="text-body-secondary fw-light">/mo</small></h1>
+                          <ul class="list-unstyled  mt-3 mb-4 lista front-2">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg>8 postări / lunar</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> 2-3 story / zi ( Luni-Vineri)</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> Copywriting (eng, rom, rus)</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> Design</li>
+                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> Logo</li>
+                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> Reclamă sponsorizată</li>
+                          </ul>
+                          <a class="insta front-2"href="https://www.instagram.com/artmediaagency.md/"><button type="button" class="w-100 btn btn-lg btn-outline-primary buton" >Cumpara</button></a>
+                        </div>
+                      </div>
+                    </div>
+                     
+                    <!--   Al doilea  -->
+       <div class="col col-sm-6 col-lg-4 ">
+                    <div class="card mb-4 rounded-3 shadow-sm cont">
+                      <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal front-1">Vip</h4>
+                      </div>
+                      <div class="card-body ">
+                        <h1 class="card-title pricing-card-title">€999<small class="text-body-secondary fw-light">/mo</small></h1>
+                        <ul class="list-unstyled  mt-3 mb-4 lista front-2">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> 20-25 postări / lunar</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> Strategie de promovare</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> 5-6 story / zi ( Luni-Vineri)</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg>Copywriting (eng, rom, rus)</li>
+                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> 4 sesiuni foto lunar</li>
+                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> Analiza concurenților</li>
+                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> Poziționarea brandului</li>
+                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> Design-ul publicității</li>
+                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg> Logo</li>
+                          </ul>
+                        <a class="insta "href="https://www.instagram.com/artmediaagency.md/"><button type="button" class="w-100 btn btn-lg btn-outline-primary buton front-2">Cumpara</button></a>
+                      </div>
+                    </div>
+                  </div>
+                    <div class=" col-sm-6  col-lg-4 ">
+                        <div class="card mb-4 rounded-3 shadow-sm cont">
+                          <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal front-1">Premium</h4>
+                          </div>
+                          <div class="card-body ">
+                            <h1 class="card-title pricing-card-title">€599<small class="text-body-secondary fw-light">/mo</small></h1>
+                            <ul class="list-unstyled  mt-3 mb-4 lista front-2">
+                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                  </svg>10-12 postări / lunar</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                  </svg> Strategie de promovare</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                  </svg> 5-6 story / zi ( Luni-Vineri)</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                  </svg> Copywriting (eng, rom, rus)</li>
+                                  <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                  </svg>Sesiune foto</li>
+                                  <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                  </svg> Design-ul publicității</li>
+                                  <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                  </svg> Logo</li>
+                                  <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                  </svg> Publicitate targhetată</li>
+                              </ul>
+                            <a class="insta front-2 "href="https://www.instagram.com/artmediaagency.md/"><button type="button" class="w-100 btn btn-lg btn-outline-primary buton">Cumpara</button></a>
+                          </div>
+                        </div>
+                      </div>
+                   
+                      <!--   Al Treilea  -->
+
+           
+
+              </div>
+              </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+              <div>
+          <h1 class="d-inline-flex gap-1 comparatii ">
+            <a class="comp"data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              Compara Serviciile
+            </a>
+        </h1>
+    </div>
+          <div class="collapse culoare" id="collapseExample">
+            <div class="culoare card card-body">
+                <div class="price-plan container">
+                    <div class="table-responsive">
+                      <table class="table text-center">
+                        <thead>
+                          <tr>
+                            <th style="width: 34%;"></th>
+                            <th style="width: 33%;">Free</th>
+                            <th style="width: 33%;">Pro</th>
+                            <th style="width: 33%;">Vip</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row" class="text-start">Postări / lunar</th>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg></td>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="text-start">Story / zi</th>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                          </tr>
+                        </tbody>
+                
+                        <tbody>
+                          <tr>
+                            <th scope="row" class="text-start">Copywriting</th>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="text-start">Design</th>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="text-start">Logo</th>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="text-start">Reclamă sponsorizată</th>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                          </tr>
+                          <tr>
+                              <th scope="row" class="text-start">Sesiune foto</th>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="text-start">Design-ul publicității</th>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="text-start">Publicitate targhetată</th>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="text-start">Repere</th>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="text-start">Poze de profil</th>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="text-start">Biografie</th>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="text-start">Manager Personal</th>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="text-start">Raportare Lunară</th>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="text-start">Traducerea textelor</th>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="text-start">Colaborare blogeri, influenceri</th>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+</div>
+
+<hr class="featurette-divider spatiu">
+
+
+</div>
+ <div ></div>
+                <div class="row rand spatiu">
+    <div class="a col-sm-3 col-3" >
+      <img class="brightness photo"src="./img/Depression Cherry.jpeg" style="height:400px"alt="Cinque Terre">
+      <div class="center front-1 " >Design</div>
+    </div>
+    <div class="a  col-sm-3 col-3" >
+        <img  class="brightness photo" src="./img/marten-bjork-rH8O0FHFpfw-unsplash.jpg" style="height:400px"alt="Cinque Terre">
+        <div class="center front-1 ">Social Media</div>
+      </div>
+      <div class="a  col-sm-3 col-3" >
+        <img  class="brightness photo" src="./img/marten-bjork-rH8O0FHFpfw-unsplash.jpg"style="height:400px" alt="Cinque Terre">
+        <div class="center front-1">Reclama</div>
+      </div>
+      <div class="a  col-sm-3 col-3" >
+        <img  class="brightness photo" src="./img/marten-bjork-rH8O0FHFpfw-unsplash.jpg"style="height:400px" alt="Cinque Terre">
+        <div class="center front-1">Situri Web</div>
+      </div>
+    </div>
+
+
+
+    <div class="container px-4 py-5" id="featured-3">
+      <h2 class="pb-2 border-bottom front-1 culoare-text">Columns with icons</h2>
+      <img src="./img/thought-catalog-505eectW54k-unsplash.jpg"    class="photo"/>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 autofix">
+        <div class="feature col">
+          <h3 class="fs-2 text-body-emphasis front-1 culoare-text">Featured title</h3>
+          <p class="front-2 culoare">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          <a href="#" class="icon-link culoare-text but">
+            Call to action
+          </a>
+        </div>
+        <div class="feature col">
+          <h3 class="fs-2 text-body-emphasis front-1 culoare-text">Featured title</h3>
+          <p class="front-2 culoare">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          <a href="#" class="icon-link culoare-text but">
+            Call to action
+          </a>
+        </div>
+        <div class="feature col">
+          <h3 class="fs-2 text-body-emphasis front-1 culoare-text">Featured title</h3>
+          <p class="front-2 culoare">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          <a href="#" class="icon-link culoare-text but">
+            Call to action
+
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+          <!----->
+<div class="slider" style="margin-bottom:80px;">
+  <div class="slide-track">
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+    <div class="slide">
+      <img src="./img/Depression Cherry.jpeg" height="200" width="250" alt="" />
+    </div>
+  </div>
+</div> 
+<div class="colegs" style="  background: #516E4F;">
+<div class="wrapper">
+  <i id="left" class="fa-solid fa-angle-left"></i>
+  <ul class="carousela">
+    <li class="cardu">
+      <div class="img"><img src="./img/merakist-CNbRsQj8mHQ-unsplash.jpg" alt="img" draggable="false"></div>
+      <h2>Blanche Pearson</h2>
+      <h3 >Sales</h3>
+    </li>
+    <li class="cardu">
+      <div class="img"><img src="./img/merakist-CNbRsQj8mHQ-unsplash.jpg" alt="img" draggable="false"></div>
+      <h2>Joenas Brauers</h2>
+      <h3>Web Developer</h3>
+    </li>
+    <li class="cardu">
+      <div class="img"><img src="./img/merakist-CNbRsQj8mHQ-unsplash.jpg" alt="img" draggable="false"></div>
+      <h2>Lariach French</h2>
+      <h3>Online Teacher</h3>
+    </li>
+    <li class="cardu">
+      <div class="img"><img src="./img/merakist-CNbRsQj8mHQ-unsplash.jpg" alt="img" draggable="false"></div>
+      <h2>James Khosravi</h2>
+      <h3>Freelancer</h3>
+    </li>
+    <li class="cardu">
+      <div class="img"><img src="./img/merakist-CNbRsQj8mHQ-unsplash.jpg" alt="img" draggable="false"></div>
+      <h2>Kristina Zasiadko</h2>
+      <h3>Bank Manager</h3>
+    </li>
+    <li class="cardu">
+      <div class="img"><img src="./img/merakist-CNbRsQj8mHQ-unsplash.jpg" alt="img" draggable="false"></div>
+      <h2>Donald Horton</h2>
+      <h3>App Designer</h3>
+    </li>
+  </ul>
+  <i id="right" class="fa-solid fa-angle-right"></i>
+</div>
+</div>
+</div>
+</div>
+<div style="font-size: xx-large; text-align: center; margin: 80px;">
+  Gunoi
+</div>
+
+
+<section class="bg-light py-3 py-md-5">
+  <div class="container">
+    <div class="row gy-5 gy-lg-0 align-items-lg-center">
+      <div class="col-12 col-lg-6">
+        <img class="img-fluid rounded" loading="lazy" src="./img/melanie-deziel-U33fHryBYBU-unsplash.jpg" alt="How can we help you?">
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="row justify-content-xl-end">
+          <div class="col-12 col-xl-11">
+            <h2 class="h1 mb-3">How can we help you?</h2>
+            <p class="lead fs-4 text-secondary mb-5">We hope you have found an answer to your question. If you need any help, please search your query on our Support Center or contact us via email.</p>
+            <div class="accordion accordion-flush" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How Do I Change My Billing Information?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>To change your billing information, please follow these steps:</p>
+                    <ul>
+                      <li>Go to our website and sign in to your account.</li>
+                      <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
+                      <li>Under the "Billing Information" section, click on "Edit."</li>
+                      <li>Make your changes and click on "Save."</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How Does Payment System Work?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    A payment system is a way to transfer money from one person or organization to another. It is a complex process that involves many different parties, including banks, credit card companies, and merchants.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How Do I Cancel My Account?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>To cancel your account, please follow these steps:</p>
+                    <ul>
+                      <li>Go to our website and sign in to your account.</li>
+                      <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
+                      <li>Scroll to the bottom of the page and click on "Cancel Account."</li>
+                      <li>Enter your password and click on "Cancel Account."</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<div class="prices">
+<div class="wrappers ">
+  <input type="radio" name="slider" id="tab-1">
+  <input type="radio" name="slider" id="tab-2" checked>
+  <input type="radio" name="slider" id="tab-3">
+  <header>
+    <label for="tab-1" class="tab-1">Basic</label>
+    <label for="tab-2" class="tab-2">Standard</label>
+    <label for="tab-3" class="tab-3">Team</label>
+    <div class="slider"></div>
+  </header>
+  <div class="card-area">
+    <div class="cards">
+      <div class="rows rows-1">
+        <div class="price-details">
+          <span class="price">19</span>
+          <p>For beginner use</p>
+        </div>
+        <ul class="features">
+          <li><i class="fas fa-check"></i><span>100 GB Premium Bandwidth</span></li>
+          <li><i class="fas fa-check"></i><span>FREE 50+ Installation Scripts WordPress Supported</span></li>
+          <li><i class="fas fa-check"></i><span>One FREE Domain Registration .com and .np extensions only</span></li>
+          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+        </ul>
+      </div>
+      <div class="rows">
+        <div class="price-details">
+          <span class="price">99</span>
+          <p>For professional use</p>
+        </div>
+        <ul class="features">
+          <li><i class="fas fa-check"></i><span>Unlimited GB Premium Bandwidth</span></li>
+          <li><i class="fas fa-check"></i><span>FREE 200+ Installation Scripts WordPress Supported</span></li>
+          <li><i class="fas fa-check"></i><span>Five FREE Domain Registration .com and .np extensions only</span></li>
+          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+        </ul>
+      </div>
+      <div class="rows">
+        <div class="price-details">
+          <span class="price">49</span>
+          <p>For team collaboration</p>
+        </div>
+        <ul class="features">
+          <li><i class="fas fa-check"></i><span>200 GB Premium Bandwidth</span></li>
+          <li><i class="fas fa-check"></i><span>FREE 100+ Installation Scripts WordPress Supported</span></li>
+          <li><i class="fas fa-check"></i><span>Two FREE Domain Registration .com and .np extensions only</span></li>
+          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <button>Choose plan</button>
+</div>
+</div>
+
+
+
+
+
+
+<div class="container px-4 py-5" id="custom-cards">
+            <h2 class="pb-2 border-bottom">Custom cards</h2>
+        
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+              <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg " style="background-image: url('./img/mikayla-mallek-3iT3dnmblGE-unsplash.jpg');">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                      <li class="me-auto">
+                        <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                      </li>
+                      <li class="d-flex align-items-center me-3">
+                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                        <small>a</small>
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                        <small>3d</small>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                      <li class="me-auto">
+                        <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                      </li>
+                      <li class="d-flex align-items-center me-3">
+                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                        <small>a</small>
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                        <small>4d</small>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                      <li class="me-auto">
+                        <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                      </li>
+                      <li class="d-flex align-items-center me-3">
+                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                        <small>a</small>
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                        <small>5d</small>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container ">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-muted front-2"  style="color:#516E4F">© 2021 Company, Inc</p>
+  
+      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+  
+      <ul class="nav col-md-4 justify-content-end cu">
+        <li class="nav-item "><a href="#" class="nav-link px-2 text-muted front-2 " style="color:#516E4F">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted front-2" style="color:#516E4F">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted front-2" style="color:#516E4F">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted front-2" style="color:#516E4F">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted front-2" style="color:#516E4F">About</a></li>
+      </ul>
+    </footer>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
