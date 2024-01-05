@@ -9,7 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@500&family=Mooli&family=Playfair+Display&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<title>Document</title>
+<script src="jquery-3.7.1.min.js"></script>
+<title>Art Media Agency</title>
 </head>
 <style>
 
@@ -77,13 +78,14 @@
     background-color:#F4EFE2;
   }
   .buton{
-    border:1px solid #516E4F; 
-    border-radius: 40px;
     color:#516E4F;
+    border:1px solid#516E4F ;
+
   }
   .buton:hover{
     background-color: #516E4F !important;
     border-color:#516E4F;
+    color:#F4EFE2
   }
   .buton:active{
     border-color:#516E4F !important;
@@ -343,6 +345,7 @@ font-size:xx-large;
   height: 148px;
   width: 148px;
   border-radius: 50%;
+  
 }
 .cardu .img img {
   width: 140px;
@@ -391,10 +394,12 @@ font-size:xx-large;
 }
 .wrappers{
   width: 400px;
-  background: #fff;
+  background: #F4EFE2;
   border-radius: 16px;
   padding: 30px;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  font-family: 'Ysabeau Infant', sans-serif;
+  color: #516E4F;
 }
 .wrappers header{
   height: 55px;
@@ -403,6 +408,7 @@ font-size:xx-large;
   border: 1px solid #ccc;
   border-radius: 30px;
   position: relative;
+  
 }
 header label{
   height: 100%;
@@ -415,22 +421,27 @@ header label{
   align-items: center;
   justify-content: center;
   transition: color 0.3s ease;
+  
+  
 }
 #tab-1:checked ~ header .tab-1,
 #tab-2:checked ~ header .tab-2,
 #tab-3:checked ~ header .tab-3{
-  color: #fff;
+  color: #516E4F;
 }
 header label:nth-child(2){
   width: 40%;
+  
 }
 header .slider{
   position: absolute;
   height: 85%;
   border-radius: inherit;
-  background: linear-gradient(145deg, #D5A3FF 0%, #77A5F8 100%);
   transition: all 0.3s ease;
+  border: 1.5px solid #516E4F;
+  background-color: #516E4F;
 }
+
 #tab-1:checked ~ header .slider{
   left: 0%;
   width: 90px;
@@ -475,13 +486,14 @@ header .slider{
   margin: 20px 0;
   text-align: center;
   padding-bottom: 25px;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #ccc;
 }
 .price-details .price{
   font-size: 65px;
   font-weight: 600;
   position: relative;
   font-family: 'Noto Sans', sans-serif;
+  color: #516E4F;
 }
 .price-details .price::before,
 .price-details .price::after{
@@ -513,7 +525,7 @@ header .slider{
   align-items: center;
 }
 .features li i{
-  background: linear-gradient(#D5A3FF 0%, #77A5F8 100%);
+  background: #516E4F;
   background-clip: text;
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
@@ -528,14 +540,254 @@ header .slider{
   outline: none;
   height: 50px;
   font-size: 18px;
-  color: #fff;
+  color: #516E4F;
   cursor: pointer;
   margin-top: 20px;
-  background: linear-gradient(145deg, #D5A3FF 0%, #77A5F8 100%);
-  transition: transform 0.3s ease;
+  background-color:#F4EFE2 ;
+  border:1.5px solid #516E4F;
 }
 .wrapper button:hover{
-  transform: scale(0.98);
+  background-color: #516E4F ;
+    border-color:#516E4F;
+    color:#F4EFE2;
+}
+.accordion {
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.footer ul{
+  list-style: none;
+}
+.footer{
+  background-color: #516E4F;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #F4EFE2;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #B4B6BB;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #F4EFE2;
+  text-decoration: none;
+  font-weight: 300;
+  color: #F4EFE2;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #F4EFE2;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #516E4F;
+  background-color: #F4EFE2;
+}
+
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+#fcf-form {
+    display:block;
+}
+
+.fcf-body {
+    margin: 0;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #F4EFE2;
+    text-align: left;
+    background-color: #516E4F;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 0.25rem;
+    max-width: 100%;
+}
+
+.fcf-form-group {
+    margin-bottom: 1rem;
+}
+
+.fcf-input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+.fcf-form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #F4EFE2;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    outline: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.fcf-form-control:focus {
+    border: 1px solid #F4EFE2;
+}
+
+select.fcf-form-control[size], select.fcf-form-control[multiple] {
+    height: auto;
+}
+
+textarea.fcf-form-control {
+    font-family: -apple-system, Arial, sans-serif;
+    height: auto;
+}
+
+label.fcf-label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.fcf-credit {
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: #545b62;
+}
+
+.fcf-credit a {
+    color: #545b62;
+    text-decoration: underline;
+}
+
+.fcf-credit a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.fcf-btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fcf-btn {
+        transition: none;
+    }
+}
+
+.fcf-btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+.fcf-btn:focus, .fcf-btn.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.fcf-btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.fcf-btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.fcf-btn-primary:focus, .fcf-btn-primary.focus {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.fcf-btn-lg, .fcf-btn-group-lg>.fcf-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+}
+
+.fcf-btn-block {
+    display: block;
+    width: 100%;
+}
+
+.fcf-btn-block+.fcf-btn-block {
+    margin-top: 0.5rem;
+    
+}
+
+input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
+    width: 100%;
 }
 </style>
 <body>
@@ -627,136 +879,70 @@ header .slider{
 
           
           
-          <div class="px-4 py-5 my-5 text-center" style="background-color: #516E4F;">
-  <h1 class="display-5 fw-bold text-body-emphasis front-1 price-title">Serviiciile pe care le oferim:</h1>
-  <div class="col-lg-10 col-md-10 col-sm-9 mx-auto">
+          <div class="px-4 py-5 my-5 " style="background-color: #516E4F;">
+  <h1 class="display-5 fw-bold text-body-emphasis front-1 price-title text-center">Serviiciile pe care le oferim:</h1>
+  <div class="col-lg-10 col-md-10 col-sm-9 mx-auto text-center">
     <p class="price-text">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
     </div>
   </div>
 
+<div class="wrappers ">
+  <input type="radio" name="slider" id="tab-1">
+  <input type="radio" name="slider" id="tab-2" checked>
+  <input type="radio" name="slider" id="tab-3">
+  <header>
+    <label for="tab-1" class="tab-1 ">Basic</label>
+    <label for="tab-2" class="tab-2 " >Standard</label>
+    <label for="tab-3" class="tab-3">Team</label>
+    <div class="slider"></div>
+  </header>
+  <div class="card-area">
+    <div class="cards">
+      <div class="rows rows-1">
+        <div class="price-details">
+          <span class="price">19</span>
+          <p>For beginner use</p>
+        </div>
+        <ul class="features">
+          <li><i class="fas fa-check"></i><span>100 GB Premium Bandwidth</span></li>
+          <li><i class="fas fa-check"></i><span>FREE 50+ Installation Scripts WordPress Supported</span></li>
+          <li><i class="fas fa-check"></i><span>One FREE Domain Registration .com and .np extensions only</span></li>
+          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+        </ul>
+      </div>
+      <div class="rows">
+        <div class="price-details">
+          <span class="price">99</span>
+          <p>For professional use</p>
+        </div>
+        <ul class="features">
+          <li><i class="fas fa-check"></i><span>Unlimited GB Premium Bandwidth</span></li>
+          <li><i class="fas fa-check"></i><span>FREE 200+ Installation Scripts WordPress Supported</span></li>
+          <li><i class="fas fa-check"></i><span>Five FREE Domain Registration .com and .np extensions only</span></li>
+          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+        </ul>
+      </div>
+      <div class="rows">
+        <div class="price-details">
+          <span class="price">49</span>
+          <p>For team collaboration</p>
+        </div>
+        <ul class="features">
+          <li><i class="fas fa-check"></i><span>200 GB Premium Bandwidth</span></li>
+          <li><i class="fas fa-check"></i><span>FREE 100+ Installation Scripts WordPress Supported</span></li>
+          <li><i class="fas fa-check"></i><span>Two FREE Domain Registration .com and .np extensions only</span></li>
+          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <button class=" btn btn-lg btn-outline-primary buton hero front-2">Choose plan</button>
+</div>
+</div>
 
-  
-<div class="container">
-                  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center  ">
-                    <div class="col-lg-4 col-sm-6">
-                      <div class="card mb-4 rounded-5 shadow-sm cont " >
-                        <div class=" card-header py-3">
-                          <h4 class="my-0 fw-normal front-1" >Standard</h4>
-                        </div>
-                        <div class="card-body   ">
-                          <h1 class="card-title pricing-card-title ">€349<small class="text-body-secondary fw-light">/mo</small></h1>
-                          <ul class="list-unstyled  mt-3 mb-4 lista front-2">
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg>8 postări / lunar</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> 2-3 story / zi ( Luni-Vineri)</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> Copywriting (eng, rom, rus)</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> Design</li>
-                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> Logo</li>
-                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> Reclamă sponsorizată</li>
-                          </ul>
-                          <a class="insta front-2"href="https://www.instagram.com/artmediaagency.md/"><button type="button" class="w-100 btn btn-lg btn-outline-primary buton" >Cumpara</button></a>
-                        </div>
-                      </div>
-                    </div>
-                     
-                    <!--   Al doilea  -->
-       <div class="col col-sm-6 col-lg-4 ">
-                    <div class="card mb-4 rounded-3 shadow-sm cont">
-                      <div class="card-header py-3">
-                        <h4 class="my-0 fw-normal front-1">Vip</h4>
-                      </div>
-                      <div class="card-body ">
-                        <h1 class="card-title pricing-card-title">€999<small class="text-body-secondary fw-light">/mo</small></h1>
-                        <ul class="list-unstyled  mt-3 mb-4 lista front-2">
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> 20-25 postări / lunar</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> Strategie de promovare</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> 5-6 story / zi ( Luni-Vineri)</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg>Copywriting (eng, rom, rus)</li>
-                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> 4 sesiuni foto lunar</li>
-                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> Analiza concurenților</li>
-                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> Poziționarea brandului</li>
-                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> Design-ul publicității</li>
-                              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg> Logo</li>
-                          </ul>
-                        <a class="insta "href="https://www.instagram.com/artmediaagency.md/"><button type="button" class="w-100 btn btn-lg btn-outline-primary buton front-2">Cumpara</button></a>
-                      </div>
-                    </div>
-                  </div>
-                    <div class=" col-sm-6  col-lg-4 ">
-                        <div class="card mb-4 rounded-3 shadow-sm cont">
-                          <div class="card-header py-3">
-                            <h4 class="my-0 fw-normal front-1">Premium</h4>
-                          </div>
-                          <div class="card-body ">
-                            <h1 class="card-title pricing-card-title">€599<small class="text-body-secondary fw-light">/mo</small></h1>
-                            <ul class="list-unstyled  mt-3 mb-4 lista front-2">
-                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                  </svg>10-12 postări / lunar</li>
-                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                  </svg> Strategie de promovare</li>
-                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                  </svg> 5-6 story / zi ( Luni-Vineri)</li>
-                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                  </svg> Copywriting (eng, rom, rus)</li>
-                                  <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                  </svg>Sesiune foto</li>
-                                  <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                  </svg> Design-ul publicității</li>
-                                  <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                  </svg> Logo</li>
-                                  <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                  </svg> Publicitate targhetată</li>
-                              </ul>
-                            <a class="insta front-2 "href="https://www.instagram.com/artmediaagency.md/"><button type="button" class="w-100 btn btn-lg btn-outline-primary buton">Cumpara</button></a>
-                          </div>
-                        </div>
-                      </div>
-                   
-                      <!--   Al Treilea  -->
-
-           
-
-              </div>
-              </div>
-              </div>
 
 
 
@@ -1042,7 +1228,73 @@ header .slider{
 </div>
 </div>
 
-
+<section class=" py-3 py-md-5" style="background-color: #F4EFE2;">
+  <div class="container" >
+    <div class="row gy-5 gy-lg-0 align-items-lg-center">
+      <div class="col-12 col-lg-6">
+        <img class="img-fluid rounded"  src="./img/rodeo-project-management-software-DGG9Dzf7Udo-unsplash.jpg" alt="How can we help you?">
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="row justify-content-xl-end">
+          <div class="col-12 col-xl-11" >
+            <h2 class="h1 mb-3 front-1" style="color: #516E4F;">How can we help you?</h2>
+            <p class="lead fs-4  mb-5 front-2" style="color: #516E4F;">We hope you have found an answer to your question. If you need any help, please search your query on our Support Center or contact us via email.</p>
+            <div class="accordion accordion-flush" id="accordionExample"  style="background-color: #516E4F;">
+              <div class="accordion-item" >
+                <h2 class="accordion-header" id="headingOne" >
+                  <button class="accordion-button front-1 " style="background-color: #516E4F; color:#F4EFE2;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How Do I Change My Billing Information?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show"style="background-color:#516E4F;" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body front-2" style="color: #F4EFE2;">
+                    <p>To change your billing information, please follow these steps:</p>
+                    <ul>
+                      <li>Go to our website and sign in to your account.</li>
+                      <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
+                      <li>Under the "Billing Information" section, click on "Edit."</li>
+                      <li>Make your changes and click on "Save."</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed front-1"style="background-color: #516E4F; color:#F4EFE2;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How Does Payment System Work?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body front-2"style="background-color: #516E4F; color:#F4EFE2;">
+                    A payment system is a way to transfer money from one person or organization to another. It is a complex process that involves many different parties, including banks, credit card companies, and merchants.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed front-1"style="background-color: #516E4F; color:#F4EFE2;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How Do I Cancel My Account?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body front-2"style="background-color: #516E4F; color:#F4EFE2;">
+                    <p>To cancel your account, please follow these steps:</p>
+                    <ul>
+                      <li>Go to our website and sign in to your account.</li>
+                      <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
+                      <li>Scroll to the bottom of the page and click on "Cancel Account."</li>
+                      <li>Enter your password and click on "Cancel Account."</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <div class="price container spatiu " >
@@ -1070,162 +1322,6 @@ header .slider{
 
 <div style="font-size: xx-large; text-align: center; margin: 80px;">
   Gunoi
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="bg-light py-3 py-md-5">
-  <div class="container">
-    <div class="row gy-5 gy-lg-0 align-items-lg-center">
-      <div class="col-12 col-lg-6">
-        <img class="img-fluid rounded" loading="lazy" src="./img/melanie-deziel-U33fHryBYBU-unsplash.jpg" alt="How can we help you?">
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="row justify-content-xl-end">
-          <div class="col-12 col-xl-11">
-            <h2 class="h1 mb-3">How can we help you?</h2>
-            <p class="lead fs-4 text-secondary mb-5">We hope you have found an answer to your question. If you need any help, please search your query on our Support Center or contact us via email.</p>
-            <div class="accordion accordion-flush" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    How Do I Change My Billing Information?
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>To change your billing information, please follow these steps:</p>
-                    <ul>
-                      <li>Go to our website and sign in to your account.</li>
-                      <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
-                      <li>Under the "Billing Information" section, click on "Edit."</li>
-                      <li>Make your changes and click on "Save."</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    How Does Payment System Work?
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    A payment system is a way to transfer money from one person or organization to another. It is a complex process that involves many different parties, including banks, credit card companies, and merchants.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    How Do I Cancel My Account?
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>To cancel your account, please follow these steps:</p>
-                    <ul>
-                      <li>Go to our website and sign in to your account.</li>
-                      <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
-                      <li>Scroll to the bottom of the page and click on "Cancel Account."</li>
-                      <li>Enter your password and click on "Cancel Account."</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<div class="prices">
-<div class="wrappers ">
-  <input type="radio" name="slider" id="tab-1">
-  <input type="radio" name="slider" id="tab-2" checked>
-  <input type="radio" name="slider" id="tab-3">
-  <header>
-    <label for="tab-1" class="tab-1">Basic</label>
-    <label for="tab-2" class="tab-2">Standard</label>
-    <label for="tab-3" class="tab-3">Team</label>
-    <div class="slider"></div>
-  </header>
-  <div class="card-area">
-    <div class="cards">
-      <div class="rows rows-1">
-        <div class="price-details">
-          <span class="price">19</span>
-          <p>For beginner use</p>
-        </div>
-        <ul class="features">
-          <li><i class="fas fa-check"></i><span>100 GB Premium Bandwidth</span></li>
-          <li><i class="fas fa-check"></i><span>FREE 50+ Installation Scripts WordPress Supported</span></li>
-          <li><i class="fas fa-check"></i><span>One FREE Domain Registration .com and .np extensions only</span></li>
-          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
-          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
-          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
-        </ul>
-      </div>
-      <div class="rows">
-        <div class="price-details">
-          <span class="price">99</span>
-          <p>For professional use</p>
-        </div>
-        <ul class="features">
-          <li><i class="fas fa-check"></i><span>Unlimited GB Premium Bandwidth</span></li>
-          <li><i class="fas fa-check"></i><span>FREE 200+ Installation Scripts WordPress Supported</span></li>
-          <li><i class="fas fa-check"></i><span>Five FREE Domain Registration .com and .np extensions only</span></li>
-          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
-        </ul>
-      </div>
-      <div class="rows">
-        <div class="price-details">
-          <span class="price">49</span>
-          <p>For team collaboration</p>
-        </div>
-        <ul class="features">
-          <li><i class="fas fa-check"></i><span>200 GB Premium Bandwidth</span></li>
-          <li><i class="fas fa-check"></i><span>FREE 100+ Installation Scripts WordPress Supported</span></li>
-          <li><i class="fas fa-check"></i><span>Two FREE Domain Registration .com and .np extensions only</span></li>
-          <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <button>Choose plan</button>
-</div>
 </div>
 
 
@@ -1318,131 +1414,86 @@ header .slider{
 
 
 
-  <div class="container ">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <p class="col-md-4 mb-0 text-muted front-2"  style="color:#516E4F">© 2021 Company, Inc</p>
-  
-      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      </a>
-  
-      <ul class="nav col-md-4 justify-content-end cu">
-        <li class="nav-item "><a href="#" class="nav-link px-2 text-muted front-2 " style="color:#516E4F">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted front-2" style="color:#516E4F">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted front-2" style="color:#516E4F">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted front-2" style="color:#516E4F">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted front-2" style="color:#516E4F">About</a></li>
-      </ul>
-    </footer>
-  </div>
-  <!-- Remove the container if you want to extend the Footer to full width. -->
+
 <div class="container my-5">
-
-  <footer class="bg-dark text-center text-white">
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
-
-      <!-- Twitter -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
-
-      <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-google"></i
-      ></a>
-
-      <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-
-      <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-github"></i
-      ></a>
-    </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-  
-<footer class="py-5">
-  <div class="row">
-    <div class="col-6 col-md-2 mb-3">
-      <h5>Section</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-      </ul>
-    </div>
-
-    <div class="col-6 col-md-2 mb-3">
-      <h5>Section</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-      </ul>
-    </div>
-
-    <div class="col-6 col-md-2 mb-3">
-      <h5>Section</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-      </ul>
-    </div>
-
-    <div class="col-md-5 offset-md-1 mb-3">
-      <form>
-        <h5>Subscribe to our newsletter</h5>
-        <p>Monthly digest of what's new and exciting from us.</p>
-        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-          <label for="newsletter1" class="visually-hidden">Email address</label>
-          <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-          <button class="btn btn-primary" type="button">Subscribe</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-    <p>© 2023 Company, Inc. All rights reserved.</p>
-    <ul class="list-unstyled d-flex">
-      <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-      <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-      <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-    </ul>
-  </div>
-</footer>
 </div>
+</div>
+<footer class="footer front-2">
+  <div class="container">
+   <div class="row">
+     <div class="footer-col">
+       <h4>company</h4>
+       <ul>
+         <li><a href="#">about us</a></li>
+         <li><a href="#">our services</a></li>
+         <li><a href="#">privacy policy</a></li>
+         <li><a href="#">affiliate program</a></li>
+       </ul>
+     </div>
+     <div class="footer-col">
+       <h4>get help</h4>
+       <ul>
+         <li><a href="#">FAQ</a></li>
+         <li><a href="#">shipping</a></li>
+         <li><a href="#">returns</a></li>
+         <li><a href="#">order status</a></li>
+         <li><a href="#">payment options</a></li>
+       </ul>
+     </div>
+
+     <div class="footer-col">
+       <h4>follow us</h4>
+       <div class="social-links">
+         <a href="#"><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><i class="fab fa-twitter"></i></a>
+         <a href="#"><i class="fab fa-instagram"></i></a>
+         <a href="#"><i class="fab fa-linkedin-in"></i></a>
+       </div>
+     </div>
+     <div class="fcf-body footer-col ">
+    
+  <div id="fcf-form ">
+  <h4 class="fcf-h3">Contact us</h4>
+
+  <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+      
+      <div class="fcf-form-group ">
+          <label for="Name" class="fcf-label">Your name</label>
+          <div class="fcf-input-group">
+              <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+          </div>
+      </div>
+
+      <div class="fcf-form-group">
+          <label for="Email" class="fcf-label">Your email address</label>
+          <div class="fcf-input-group">
+              <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+          </div>
+      </div>
+
+      <div class="fcf-form-group">
+          <label for="Message" class="fcf-label">Your message</label>
+          <div class="fcf-input-group">
+              <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+          </div>
+      </div>
+
+      <div class="fcf-form-group">
+          <button type="submit" id="fcf-button" class=" btn btn-lg btn-outline-primary buton hero front-2 ">Send Message</button>
+      </div>
+
+
+
+  </form>
+  </div>
+
+</div>
+   </div>
+  </div>
+</footer>
+
+
   <script src="./index.js"></script>
+  <script></script>
 </body>
 </html>
