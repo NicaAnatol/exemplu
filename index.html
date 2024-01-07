@@ -788,19 +788,48 @@ label.fcf-label {
 input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
     width: 100%;
 }
+html {
+  scroll-behavior: smooth;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: 1px solid  #516E4F;
+  border-radius:5%;
+  outline: none;
+  background-color: #F4EFE2;
+  color: #516E4F;
+  cursor: pointer;
+  opacity:75%;
+  border-radius:50%;
+}
+#myBtn:hover{
+  color:#F4EFE2;
+  background-color: #516E4F;
+  border-color: #F4EFE2;
+  opacity:100%;
+}
 </style>
 <body>
+  <button class=" front-2" onclick="topFunction()" id="myBtn" title="Go to top" ><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+  </svg></button>
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bar" style="background-color: #516E4F;" >
          <div class="col-md-3 mb-2 mb-md-0">
             <a class="navbar-brand" href="#"><img class="logo" alt="logo"src="./img/IMG_1476.PNG" height="50px"/></a>
         </div>
   
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link  px-2 tabs front-2" style="font-size: larger;">Features</a></li>
-          <li><a href="#" class="nav-link px-2 tabs front-2" style="font-size: larger;">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 tabs front-2" style="font-size: larger;">Faqs</a></li>
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style="font-size: larger;">
+          <li><a href="#preturi" class="nav-link  px-2 tabs front-2" >Servicii</a></li>
+          <li><a href="#Galerie" class="nav-link px-2 tabs front-2" >Portfolio</a></li>
+          <li><a href="#Intrebari" class="nav-link px-2 tabs front-2" >Intrebari</a></li>
+          <li><a href="#" class="nav-link px-2 tabs front-2" >Cursuri</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle tabs front-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: larger;">
+            <a class="nav-link dropdown-toggle tabs front-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
               Limba
             </a>
             <ul class="dropdown-menu">
@@ -855,7 +884,9 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
             <div class="row featurette">
               <div class="col-lg-6 col-md-6 col-sm-12">
                 <h2 class="featurette-heading fw-normal lh-1 front-1 culoare-text">First featurette heading. </h2>
-                <p class="lead front-2 culoare-text">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+                <p class="lead front-2 culoare-text">Suntem ART Media, o agenţie de marketing si publicitate dedicata  dezvoltarii afacerii dvs. Ne ocupăm de promovarea brandurilor, afacerilor și serviciilor pe social media. Suntem aici
+                  pentru a vă ajuta să vă transformați viziunea în realitate şi vă ajutăm ca brandul dvs sa ajungă la un public cât mai mare. Suntem o echipă de specialişti cu
+                  competențe diverse, gata să vă susţinem in fiecare etapă a dezvoltării și creșterii brand-ului dvs.</p>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-12">
                   <img src="./img/mikayla-mallek-3iT3dnmblGE-unsplash.jpg" class="img-fluid " alt="...">
@@ -885,7 +916,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
     </div>
   </div>
-<div class="prices">
+<div class="prices" Id="preturi">
 <div class="wrappers ">
   <input type="radio" name="slider" id="tab-1">
   <input type="radio" name="slider" id="tab-2" checked>
@@ -1088,8 +1119,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 
 
 </div>
- <div ></div>
-                <div class="row rand spatiu">
+    <div class="row rand spatiu" id="Galerie">
     <div class="a col-sm-3 col-3" >
       <img class="brightness photo"src="./img/Depression Cherry.jpeg" style="height:400px"alt="Cinque Terre">
       <div class="center front-1 " >Design</div>
@@ -1227,7 +1257,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 </div>
 </div>
 
-<section class=" py-3 py-md-5" style="background-color: #F4EFE2;">
+<section class=" py-3 py-md-5" style="background-color: #F4EFE2;" id="Intrebari">
   <div class="container" >
     <div class="row gy-5 gy-lg-0 align-items-lg-center">
       <div class="col-12 col-lg-6">
@@ -1423,10 +1453,10 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
      <div class="footer-col">
        <h4>company</h4>
        <ul>
-         <li><a href="#">about us</a></li>
-         <li><a href="#">our services</a></li>
-         <li><a href="#">privacy policy</a></li>
-         <li><a href="#">affiliate program</a></li>
+         <li><a href="#preturi">Servicii</a></li>
+         <li><a href="#Galerie">Portfolio</a></li>
+         <li><a href="#Intrebari">Intrebari</a></li>
+         <li><a href="#">Cursuri</a></li>
        </ul>
      </div>
      <div class="footer-col">
@@ -1480,9 +1510,6 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
       <div class="fcf-form-group">
           <button type="submit" id="fcf-button" class=" btn btn-lg btn-outline-primary buton hero front-2 ">Send Message</button>
       </div>
-
-
-
   </form>
   </div>
 
@@ -1490,9 +1517,6 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
    </div>
   </div>
 </footer>
-
-
   <script src="./index.js"></script>
-  <script></script>
 </body>
 </html>
